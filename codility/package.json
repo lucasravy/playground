@@ -1,0 +1,16 @@
+{
+  "name": "codility-solution",
+  "version": "1.0.0",
+  "description": "Lessons and Challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:unit": "jest"
+
+  },
+  "author": "Lucas Ravy",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
