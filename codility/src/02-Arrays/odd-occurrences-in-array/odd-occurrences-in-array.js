@@ -1,4 +1,3 @@
-// 88%
 function solution(A) {
     if (A.length === 1) {
         return A[0]
@@ -10,19 +9,19 @@ function solution(A) {
     for (let i = 0; i < A.length; i++) {
         if (occur[A[i]]) {
             occur[A[i]] = occur[A[i]] + 1
-        } else {
-            occur[A[i]] = 1
-        }
+            continue
+        } 
+        occur[A[i]] = 1
     }
 
-    for (var [key, value] of Object.entries(occur)) {
+    const arr = Object.entries(occur)
+    for (let i = 0; i < arr.length; i++) {
+        const [ key, value ] = arr[i]
         if (value % 2 != 0) {
-            response = key
-            break
+            return Number(key)
         } 
     }
 
-    return Number(response)
 }
 
 module.exports = solution
