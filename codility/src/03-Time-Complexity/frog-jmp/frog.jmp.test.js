@@ -1,7 +1,7 @@
 const solution = require('./frog-jmp')
 
 describe('Frog Jmp Tests', () => {
-    test('Correction Tests', () => {
+    test('Correctness Tests', () => {
         expect(solution(10, 85, 30)).toBe(3)
         expect(solution(50, 199, 4)).toBe(38)
         expect(solution(1, 5, 2)).toBe(2)

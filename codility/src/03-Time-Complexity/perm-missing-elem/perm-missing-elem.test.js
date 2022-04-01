@@ -1,7 +1,7 @@
 const solution = require('./perm-missing-elem')
 
 describe('Permanent Missing Element Tests', () => {
-    describe('Correction Tests', () => {
+    describe('Correctness Tests', () => {
         test('should return 4 for missing element in [2, 3, 1, 5]', () => {
             expect(solution([2,3,1,5])).toBe(4)
         })
