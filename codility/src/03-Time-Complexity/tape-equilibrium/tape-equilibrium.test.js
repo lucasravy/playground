@@ -19,7 +19,18 @@ describe('Tape Equilibrium Tests', () => {
         
         test('should return 207 for tape numbers [-1000, -500, 1000, 650, 2, 359]', () => {
             expect(solution([-1000, -500, 1000, 650, 2, 359])).toBe(207)
-        })   
+        })
+
+        test('should return 2000 for tape numbers [-1000, 1000]', () => {
+            expect(solution([-1000, 1000])).toBe(2000)
+        })  
+
+        test('should return 20 for tape numbers [-10, -20, -30, -40, 100]', () => {
+            expect(solution([-10, -20, -30, -40, 100])).toBe(20)
+        })  
+
+
+        
     })
     describe('Performance Tests', () => {
         test('should return 1 for tape numbers of random array with 10.000 numbers from 0 to 100', () => {

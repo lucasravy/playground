@@ -1,3 +1,4 @@
+// Task Score: 100% | Correctness: 100% | Perfomance: 100%
 function solution (A) {
     // empty-array
     if (A.length === 0) return 1

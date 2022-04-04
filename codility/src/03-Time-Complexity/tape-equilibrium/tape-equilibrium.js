@@ -1,13 +1,16 @@
-// Task Socore: 53% | Correctness: 100% | Perfomance: 0%
-function solution (A) {
+// Task Score: 100% | Correctness: 100% | Perfomance: 100%
+function solution(A) {
+    if (A.length === 2) {
+        return (Math.abs(A[0] - A[1]))
+    }
     const diffs = []
-    const startForTime = process.hrtime()
-    for (let i = 1; i < A.length; i++) {
-        const first = [...A]
-        const second = first.splice(i)
-        let firstSum = first.reduce((p, c) => p + c, 0)
-        let secondSum = second.reduce((p, c) => p + c, 0)
-        const diff = firstSum - secondSum
+    const rdc = [...A]
+    let left = 0
+    let right = rdc.reduce((p, c) => (p + c), 0)
+    for (let i = 0; i < A.length - 1; i++) {
+        left += (A[i])
+        right -= (A[i])
+        const diff = (left - right)
         if (diff < 0) {
             diffs.push(Math.abs(diff))
         } else {
@@ -15,14 +18,7 @@ function solution (A) {
         }
         if (diff === 0) return 0
     }
-    const endForTime = process.hrtime(startForTime)
-    const elapsedForTime = endForTime[0] + endForTime[1] / 1000000000
-
-    const startSortTime = process.hrtime()
     diffs.sort((a, b) => a - b)
-    const endSortTime = process.hrtime(startSortTime)
-    const elapsedSortTime = endSortTime[0] + endSortTime[1] / 1000000000
-    console.log('\n', '###############################', '\n', `## ...For: ${elapsedForTime} `, '\n', `## ..Sort: ${elapsedSortTime}`, '\n', '###############################')
     return diffs[0]
 }
 

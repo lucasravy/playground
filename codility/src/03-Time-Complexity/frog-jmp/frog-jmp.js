@@ -1,3 +1,4 @@
+// Task Score: 100% | Correctness: 100% | Perfomance: 100%
 /**
  * Frog Jump
  * @param {integer} X - Current Frog location 

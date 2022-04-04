@@ -1,3 +1,4 @@
+// Task Score: 100% | Correctness: 100% | Perfomance: 100%
 function solution(A) {
     if (A.length === 1) {
         return A[0]
