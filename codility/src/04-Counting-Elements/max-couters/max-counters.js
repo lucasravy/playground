@@ -1,4 +1,4 @@
-// Task Score: 88% | Correctness: 100% | Perfomance: 100%
+// Task Score: 100% | Correctness: 100% | Perfomance: 100%
 function solution(N, A) {
     const response = new Array(N)
     for (let i = 0; i < response.length; i++) {

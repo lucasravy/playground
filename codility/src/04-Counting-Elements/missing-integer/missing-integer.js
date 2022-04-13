@@ -1,18 +1,29 @@
+
+// Task Score: 100% | Correctness: 100% | Perfomance: 100%
 function solution(A) {
-    if (A.reduce((p, c) => p + c) < 0) {
+    A.sort((a, b) => a - b)
+    if (A[A.length - 1] < 0) {
         return 1
     }
-    A.sort()
-    console.log('A', A)
-    let cur = A[0] > 0 ? A[0] : 1
-    for (let i = 0; i < A.length - 1; i++) {
-        console.log("==== Iteração", i + 1, "Atual:", A[i], "Próximo:", A[i + 1], "cur:", cur)
-        if (A[i] === A[i + 1]) {
+    let res = 1
+    for (let i = 0; i < A.length; i++) {
+        const current = A[i]
+        const next = A[i + 1]
+        if (current < 0 || current === next) {
             continue
         }
-        cur++
-        if (A[i] < cur && cur < A[i + 1]) {
-            return cur
+
+        if (res > 0 && res < current) {
+            return res
+        }
+
+        if (current < res && res < next) {
+            return res
+        } 
+
+        res++
+        if (current < res && res < next) {
+            return res
         } 
     }
     return A[A.length -1] + 1
